@@ -1,0 +1,17 @@
+[project]
+name = "airbnb-django"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Nico Audy", email = "nicoaudy1994@gmail.com"},
+]
+dependencies = [
+    "django>=5.0.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
