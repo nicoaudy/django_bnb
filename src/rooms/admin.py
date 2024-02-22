@@ -5,7 +5,27 @@ from . import models
 @admin.register(models.Room)
 class RoomAdmin(admin.ModelAdmin):
 
-    pass
+    list_display = (
+        "host",
+        "name",
+        "country",
+        "city",
+        "price",
+        "guests",
+        "beds",
+        "bedrooms",
+        "baths",
+        "check_in",
+        "check_out",
+        "instant_book",
+        "room_type",
+    )
+
+    list_filter = (
+        "instant_book",
+        "city",
+        "country",
+    )
 
 
 @admin.register(models.RoomType, models.Amenity, models.Facility, models.HouseRule)
