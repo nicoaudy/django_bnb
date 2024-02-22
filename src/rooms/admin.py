@@ -5,6 +5,37 @@ from . import models
 @admin.register(models.Room)
 class RoomAdmin(admin.ModelAdmin):
 
+    fieldsets = (
+        (
+            "Basic Info",
+            {"fields": ("name", "description", "country",
+                        "city", "address", "price", "room_type")}
+        ),
+        (
+
+            "Times",
+            {"fields": ("check_in", "check_out", "instant_book")}
+        ),
+        (
+
+            "Spaces",
+            {"fields": ("guests", "beds", "bedrooms", "baths")}
+        ),
+        (
+
+            "More About the Space",
+            {
+                "classes": ("collapse",),
+                "fields": ("amenities", "facilities", "house_rules"),
+            }
+        ),
+        (
+
+            "Last Details",
+            {"fields": ("host",)}
+        ),
+    )
+
     list_display = (
         "host",
         "name",
@@ -25,6 +56,12 @@ class RoomAdmin(admin.ModelAdmin):
         "instant_book",
         "city",
         "country",
+    )
+
+    filter_horizontal = (
+        "amenities",
+        "facilities",
+        "house_rules",
     )
 
 
