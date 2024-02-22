@@ -11,4 +11,14 @@ class RoomAdmin(admin.ModelAdmin):
 @admin.register(models.RoomType, models.Amenity, models.Facility, models.HouseRule)
 class ItemAdmin(admin.ModelAdmin):
 
+    """ item admin definition """
+
+    pass
+
+
+@admin.register(models.Photo)
+class PhotoAdmin(admin.ModelAdmin):
+
+    """ photo admin definition """
+
     pass
