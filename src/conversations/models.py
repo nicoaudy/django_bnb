@@ -11,7 +11,7 @@ class Conversation(core_models.TimestampedModel):
     participants = models.ManyToManyField(user_models.User, blank=True)
 
     def __str__(self):
-        return self.created
+        return str(self.created)
 
 
 class Message(core_models.TimestampedModel):
