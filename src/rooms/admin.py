@@ -50,7 +50,8 @@ class RoomAdmin(admin.ModelAdmin):
         "check_out",
         "instant_book",
         "room_type",
-        "total_amenities"
+        "total_amenities",
+        "total_rating"
     )
 
     ordering = ("name", "price")
