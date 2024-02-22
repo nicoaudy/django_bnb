@@ -6,3 +6,9 @@ from . import models
 class RoomAdmin(admin.ModelAdmin):
 
     pass
+
+
+@admin.register(models.RoomType)
+class RoomTypeAdmin(admin.ModelAdmin):
+
+    pass
