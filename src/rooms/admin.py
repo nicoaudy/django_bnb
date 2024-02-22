@@ -50,7 +50,10 @@ class RoomAdmin(admin.ModelAdmin):
         "check_out",
         "instant_book",
         "room_type",
+        "total_amenities"
     )
+
+    ordering = ("name", "price")
 
     list_filter = (
         "instant_book",
@@ -63,6 +66,9 @@ class RoomAdmin(admin.ModelAdmin):
         "facilities",
         "house_rules",
     )
+
+    def total_amenities(self, obj):
+        return obj.amenities.count()
 
 
 @admin.register(models.RoomType, models.Amenity, models.Facility, models.HouseRule)
